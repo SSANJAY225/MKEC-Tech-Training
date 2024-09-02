@@ -14,6 +14,16 @@ public class DistinctColor {
             int blue = sc.nextInt();
             int distinctColor = 0;
 
+            if (red > 0) {
+                distinctColor++;
+            }
+            if (blue > 0) {
+                distinctColor++;
+            }
+            if (green > 0) {
+                distinctColor++;
+            }
+            
             int minredgreen = Math.min(red, green);// yellow
             distinctColor += minredgreen;
             red-=minredgreen;
@@ -29,15 +39,7 @@ public class DistinctColor {
             red-=minredblue;
             blue-=minredblue;
 
-            if (red > 0) {
-                distinctColor++;
-            }
-            if (blue > 0) {
-                distinctColor++;
-            }
-            if (green > 0) {
-                distinctColor++;
-            }
+            
             System.out.println(distinctColor);
         }
 
